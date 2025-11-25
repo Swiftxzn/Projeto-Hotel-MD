@@ -30,7 +30,7 @@ a {
 }
 
 /* CABEÇALHO */
-.section_container {
+.section-container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 5rem 1rem;
@@ -42,7 +42,7 @@ header {
     position: relative;
 }
 
-.navbar_container {
+.navbar-container {
     max-width: 1440px;
     background-color: var(--white);
     margin: auto;
@@ -54,27 +54,27 @@ header {
     transform: translateY(35%);
 }
 
-.navbar_logo img {
+.navbar-logo img {
     margin-top: 12px;
 }
 
 
 
 /*itens menu*/
-.navbar_links {
+.navbar-links {
     list-style: none;
     display: flex;
     gap: 2rem
 }
 
-.navbar_links a {
+.navbar-links a {
     color: var(--text-dark);
     font-weight: 600;
     font-size: 1rem;
     transition: 0.3;
 }
 
-.navbar_links a:hover {
+.navbar-links a:hover {
     color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
 }
@@ -154,12 +154,10 @@ header {
 }
 
 .about-section {
-    background-image: linear-gradient(
-        to right,
-        rgba(33, 31, 31, 0.9),
-        rgba(255, 255, 255, 0.9)
-    ),
-    url('../img/banner.jpg');
+    background-image: linear-gradient(to right,
+            rgba(33, 31, 31, 0.9),
+            rgba(255, 255, 255, 0.9)),
+        url('../img/banner.jpg');
     background-size: cover;
     background-position: center;
     padding-block: 6rem;
@@ -266,7 +264,7 @@ header {
 
 /*Botão Mobile*/
 
-.navbar_toggle {
+.navbar-toggle {
     font-size: 2rem;
     border: none;
     background: none;
@@ -276,7 +274,7 @@ header {
     display: none;
 }
 
-.navbar_toggle ion-icon:hover {
+.navbar-toggle ion-icon:hover {
     color: var(--secondary-color);
 }
 
@@ -302,13 +300,13 @@ header {
     z-index: -1;
 }
 
-.hero-section .hero_container {
+.hero-section .hero-container {
     position: relative;
     margin: 0 auto;
     text-align: center;
 }
 
-.hero_container h1 {
+.hero-container h1 {
     color: var(--white);
     font-size: 4rem;
     font-family: var(--ff);
@@ -369,7 +367,7 @@ header {
     opacity: 1;
 }
 
-.reserva_container {
+.reserva-container {
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -382,11 +380,11 @@ header {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    padding-bottom: 0.5rem; 
+    padding-bottom: 0.5rem;
     padding-right: 0.7rem;
     border-bottom: 2px solid var(--secondary-color);
     color: var(--secondary-color);
-    border-radius: 0 0  10px 10px;
+    border-radius: 0 0 10px 10px;
     cursor: pointer;
 }
 
@@ -416,6 +414,7 @@ header {
 .input-box select option {
     color: var(--text-dark);
 }
+
 /* Equipe */
 .equipe {
     padding: 80px 20px;
@@ -610,11 +609,11 @@ header {
 /*RESPONSIVIDADE*/
 
 @media (max-width: 1440px) {
-    .navbar_logo img {
+    .navbar-logo img {
         max-height: 90px;
     }
 
-    .navbar_links a {
+    .navbar-links a {
         font-size: 0.8rem
     }
 
@@ -627,7 +626,7 @@ header {
 
     /* HEADER */
 
-    .navbar_container {
+    .navbar-container {
         transform: none !important;
         height: 80px;
         border-radius: 0%;
@@ -637,26 +636,26 @@ header {
         height: 80px;
     }
 
-    .navbar_links {
+    .navbar-links {
         display: none;
     }
 
-    .navbar_toggle {
+    .navbar-toggle {
         display: block;
         font-size: 2rem;
     }
 
-    .navbar_logo img {
+    .navbar-logo img {
         height: 65px;
     }
 
     /* HERO */
 
-    .hero_container {
+    .hero-container {
         margin-bottom: 1rem;
     }
 
-    .hero_container h1 {
+    .hero-container h1 {
         font-size: 3rem;
         line-height: 1.2;
     }
@@ -666,13 +665,13 @@ header {
         padding-bottom: 0;
     }
 
-    .hero-section .hero_container {
+    .hero-section .hero-container {
         justify-content: center !important;
         align-items: center !important;
         text-align: center;
     }
 
-    .hero_container .btn {
+    .hero-container .btn {
         font-size: 1rem;
         padding: 0.6rem 2rem;
     }
@@ -689,7 +688,7 @@ header {
         bottom: 0;
     }
 
-    .reserva_container {
+    .reserva-container {
         gap: 1.5rem;
     }
 
@@ -707,10 +706,26 @@ header {
         font-size: 0.9rem;
     }
 
+    /* SOBRE */
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about-grid {
+        justify-content: center;
+    }
+
+    .about-content {
+        text-align: center;
+        margin: 20px;
+    }
+
 }
 
 @media (max-width: 768px) {
-    
+
     .search-box {
         display: none;
     }
@@ -720,25 +735,61 @@ header {
         height: 85vh;
     }
 
-    .hero_container {
+    .hero-container {
         justify-content: center !important;
         align-items: center !important;
         text-align: center;
     }
 
-    .hero_container h1 {
+    .hero-container h1 {
         font-size: 2.2rem;
+    }
+
+    /* RESERVA */
+    .reserva {
+        bottom: 0;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .reserva-container {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    /* SOBRE */
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .about-column {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .about-grid .about-column:nth-child(2) {
+        transform: none;
+    }
+
+    .cards-equipe {
+        gap: 30px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 40px);
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    
+
     /* HERO */
-    .hero_container h1 {
+    .hero-container h1 {
         font-size: 1.5rem;
     }
 
-    .hero_container .btn {
+    .hero-container .btn {
         padding: 0.5rem 1.5rem;
         font-size: 0.9rem;
     }
